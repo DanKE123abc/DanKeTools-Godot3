@@ -1,6 +1,8 @@
 using Godot;
 using System;
+using DanKeTools.Event;
 using Test;
+using DanKeTools.Net;
 
 public class new_script : Node
 {
@@ -12,7 +14,13 @@ public class new_script : Node
     public override void _Ready()
     {
         Test.Test.Instance().Hello();
+        GD.Print(Requests.Get("http://httpbin.org/get",""));
+        EventCenter.Instance().AddEventListener("Hello",SayHello);
     }
 
+    public void SayHello()
+    {
+        GD.Print("HHHHHElLO");
+    }
 
 }
