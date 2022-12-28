@@ -1,0 +1,9 @@
+D:\DanKeTools_Godot\.mono\temp\bin\Debug\DanKeTools_Godot.dll
+D:\DanKeTools_Godot\.mono\temp\bin\Debug\DanKeTools_Godot.pdb
+D:\DanKeTools_Godot\.mono\temp\obj\Debug\DanKeTools_Godot.csproj.AssemblyReference.cache
+D:\DanKeTools_Godot\.mono\temp\obj\Debug\DanKeTools_Godot.GeneratedMSBuildEditorConfig.editorconfig
+D:\DanKeTools_Godot\.mono\temp\obj\Debug\DanKeTools_Godot.AssemblyInfoInputs.cache
+D:\DanKeTools_Godot\.mono\temp\obj\Debug\DanKeTools_Godot.AssemblyInfo.cs
+D:\DanKeTools_Godot\.mono\temp\obj\Debug\DanKeTools_Godot.csproj.CoreCompileInputs.cache
+D:\DanKeTools_Godot\.mono\temp\obj\Debug\DanKeTools_Godot.dll
+D:\DanKeTools_Godot\.mono\temp\obj\Debug\DanKeTools_Godot.pdb
