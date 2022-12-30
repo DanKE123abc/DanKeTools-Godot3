@@ -36,13 +36,33 @@ namespace DanKeTools.Scene
             var monoManager = GetNode<MonoManager>("/root/MonoManager");
             monoManager.StartCoroutine(ReallyLoadSceneAsyn(name, func));
         }
-        
+
+
+
+        private ResourceInteractiveLoader _loader;
+        private double _itemCount;
+        private double _nowCount;
+        private double _progress;
         private IEnumerator ReallyLoadSceneAsyn(string name, Action func)
         {
-            GetTree().ChangeScene(name);
+            _loader = ResourceLoader.LoadInteractive(name);
+            _itemCount = _loader.GetStageCount();
+            while (true)
+            {
+                _nowCount = _loader.GetStage();
+                _loader.Poll();
+                _progress = _nowCount % _itemCount;
+                EventCenter.Instance().EventTrigger("SceneLoading",_progress);
+                yield return _progress;
+                if (_loader.GetResource() != null)
+                {
+                    GetTree().ChangeSceneTo((PackedScene)_loader.GetResource());
+                    break;
+                }
+            }
             func();
-            yield return true;
         }
+        
     }
 
 }
