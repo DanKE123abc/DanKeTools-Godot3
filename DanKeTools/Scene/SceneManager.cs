@@ -5,6 +5,7 @@ using System;
 using System.ComponentModel;
 using DanKeTools;
 using DanKeTools.Event;
+using DanKeTools.Mono;
 
 
 namespace DanKeTools.Scene
@@ -32,9 +33,8 @@ namespace DanKeTools.Scene
         
         public void LoadSceneAsyn(string name, Action func)
         {
-            
-            CoroutineManager.Instance().Start(ReallyLoadSceneAsyn(name,func));
-            CoroutineManager.Instance().UpdateCoroutine();
+            var monoManager = GetNode<MonoManager>("/root/MonoManager");
+            monoManager.StartCoroutine(ReallyLoadSceneAsyn(name, func));
         }
         
         private IEnumerator ReallyLoadSceneAsyn(string name, Action func)

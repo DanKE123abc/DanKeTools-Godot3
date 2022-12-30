@@ -3,8 +3,6 @@ using System;
 
 namespace DanKeTools
 {
-
-
 	///<summary>
 	///脚本名称： Singleton.cs
 	///修改时间：2022/11/18

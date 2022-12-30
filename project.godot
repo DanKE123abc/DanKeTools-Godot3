@@ -17,6 +17,7 @@ run/main_scene="res://Scenes/Control.tscn"
 
 SceneManager="*res://DanKeTools/Scene/SceneManager.cs"
 MonoController="*res://DanKeTools/Mono/MonoController.cs"
+MonoManager="*res://DanKeTools/Mono/MonoManager.cs"
 
 [gui]
 
