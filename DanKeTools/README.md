@@ -8,6 +8,8 @@
 
 ***IO/InputManager.cs***
 
+***IO/FileManager.cs***
+
 ***Mono/MonoManager.cs***
 
 ***Mono/MonoController.cs***

@@ -13,7 +13,7 @@ namespace DanKeTools.Scene
 
     ///<summary>
     ///脚本名称： SceneManager.cs
-    ///修改时间：2022/12/23
+    ///修改时间：2022/12/30
     ///脚本功能：
     ///备注：
     ///</summary>
@@ -31,9 +31,7 @@ namespace DanKeTools.Scene
             var monoManager = GetNode<MonoManager>("/root/MonoManager");
             monoManager.StartCoroutine(ReallyLoadSceneAsyn(name, func));
         }
-
-
-
+        
         private ResourceInteractiveLoader _loader;
         private double _itemCount;
         private double _nowCount;
