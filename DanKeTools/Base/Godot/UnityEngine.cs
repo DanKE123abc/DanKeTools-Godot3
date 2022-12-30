@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections;
 
-namespace DanKeTools
+namespace UnityEngine
 {
     ///<summary>
     ///脚本名称： GodotBase.cs
@@ -42,11 +42,12 @@ namespace DanKeTools
         public override void _Process(float delta)
         {
             TryCall("Update");
+            TryCall("LateUpdate");
         }
 
         public override void _PhysicsProcess(float delta)
         {
-           TryCall("FixedUpdate();");
+            TryCall("FixedUpdate");
         }
     }
 
