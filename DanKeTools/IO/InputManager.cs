@@ -20,12 +20,6 @@ namespace DanKeTools.IO
     public class InputManager : Node
     {
         private bool isStart = false;
-
-        public override void _Ready()
-        {
-            GD.Print("请确保InputManager已挂载到AutoLoad作为单例运行！");
-        }
-        
         
         public override void _UnhandledInput(InputEvent @event)
         {

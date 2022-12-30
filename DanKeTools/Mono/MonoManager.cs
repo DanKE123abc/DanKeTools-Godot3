@@ -76,6 +76,7 @@ namespace DanKeTools.Mono
     }
 
     #endregion
+    
     ///<summary>
     ///脚本名称： MonoManager.cs
     ///修改时间：2022/12/30
@@ -84,11 +85,6 @@ namespace DanKeTools.Mono
     ///</summary>
     public class MonoManager : Node
     {
-        
-        public override void _Ready()
-        {
-            GD.Print("请确保MonoManager已挂载到AutoLoad作为单例运行！");
-        }
         
 
         /// <summary>

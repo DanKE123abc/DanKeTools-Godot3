@@ -20,11 +20,6 @@ namespace DanKeTools.Scene
 
     public class SceneManager : Node
     {
-        public override void _Ready()
-        {
-            GD.Print("请确保SceneManager已挂载到AutoLoad作为单例运行！");
-        }
-
         public void LoadScene(string name, Action func)
         {
             GetTree().ChangeScene(name);

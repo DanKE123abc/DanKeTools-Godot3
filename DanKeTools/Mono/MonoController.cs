@@ -14,11 +14,6 @@ namespace DanKeTools.Mono
     {
         private event Action updateEvent;
 
-        public override void _Ready()
-        {
-            GD.Print("请确保MonoController已挂载到AutoLoad作为单例运行！");
-        }
-
         public override void _Process(float delta)
         {
             if (updateEvent != null)

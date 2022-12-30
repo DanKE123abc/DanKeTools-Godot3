@@ -2,6 +2,18 @@
 
 当前版本：v1.0.0
 
+## 使用前必读
+
+以下脚本使用必须挂载到AutoLoad
+
+***IO/InputManager.cs***
+
+***Mono/MonoManager.cs***
+
+***Mono/MonoController.cs***
+
+***Scene/SceneManager.cs***
+
 ## 命名空间
 
 ##### 单例模式
