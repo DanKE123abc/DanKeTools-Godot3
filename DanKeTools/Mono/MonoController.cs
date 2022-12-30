@@ -6,7 +6,7 @@ namespace DanKeTools.Mono
 {
     ///<summary>
     ///脚本名称： MonoController.cs
-    ///修改时间：
+    ///修改时间：2022/12/30
     ///脚本功能：
     ///备注：
     ///</summary>
@@ -16,7 +16,7 @@ namespace DanKeTools.Mono
 
         public override void _Ready()
         {
-            GD.PrintErr("请确保MonoController已挂载到AutoLoad作为单例运行！");
+            GD.Print("请确保MonoController已挂载到AutoLoad作为单例运行！");
         }
 
         public override void _Process(float delta)

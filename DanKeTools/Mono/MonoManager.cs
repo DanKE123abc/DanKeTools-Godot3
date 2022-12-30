@@ -5,7 +5,6 @@ using System;
 using DanKeTools;
 using DanKeTools.Mono;
 using System.ComponentModel;
-using System;
 
 
 
@@ -79,18 +78,16 @@ namespace DanKeTools.Mono
     #endregion
     ///<summary>
     ///脚本名称： MonoManager.cs
-    ///修改时间：
+    ///修改时间：2022/12/30
     ///脚本功能：
     ///备注：
     ///</summary>
     public class MonoManager : Node
     {
-        private MonoController controller;
-
+        
         public override void _Ready()
         {
-            GD.PrintErr("请确保MonoManager已挂载到AutoLoad作为单例运行！");
-            var sceneManager = GetNode<MonoController>("/root/MonoController");
+            GD.Print("请确保MonoManager已挂载到AutoLoad作为单例运行！");
         }
         
 
@@ -100,6 +97,7 @@ namespace DanKeTools.Mono
         /// <param name="function"></param>
         public void AddUpdateListener(Action function)
         {
+            var controller = GetNode<MonoController>("/root/MonoController");
             controller.AddUpdateListener(function);
         }
 
@@ -109,6 +107,7 @@ namespace DanKeTools.Mono
         /// <param name="function"></param>
         public void RemoveUpdateListener(Action function)
         {
+            var controller = GetNode<MonoController>("/root/MonoController");
             controller.RemoveUpdateListener(function);
         }
         

@@ -22,7 +22,7 @@ namespace DanKeTools.Scene
     {
         public override void _Ready()
         {
-            GD.PrintErr("请确保SceneManager已挂载到AutoLoad作为单例运行！");
+            GD.Print("请确保SceneManager已挂载到AutoLoad作为单例运行！");
         }
 
         public void LoadScene(string name, Action func)
