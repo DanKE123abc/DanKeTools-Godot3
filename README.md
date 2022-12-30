@@ -6,6 +6,8 @@ DanKeTools是基于Unity的一个基础开发框架，用于提升开发效率�
 
 DanKeTools_Godot是在Godot Mono版本上可以使用的开发框架，包含了一些项目中的常用组件。
 
+#### [文档](https://github.com/DanKE123abc/DanKeTools_Godot/blob/main/DanKeTools/README.md)
+
 ### 环境
 
 Godot开发版本： v3.5.1.stable.mono.official.6fed1ffa3
