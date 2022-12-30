@@ -40,9 +40,8 @@ namespace DanKeTools.Scene
         private IEnumerator ReallyLoadSceneAsyn(string name, Action func)
         {
             GetTree().ChangeScene(name);
-            GD.PrintErr("xiec");
-            yield return true;
             func();
+            yield return true;
         }
     }
 

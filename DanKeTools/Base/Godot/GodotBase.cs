@@ -9,45 +9,44 @@ namespace DanKeTools
     ///修改时间：
     ///脚本功能：Godot基础代码
     ///备注：
-    ///</summary
+    ///</summary>
     public class MonoBehaviour : Node
     {
-        public virtual void Start()
-        {
+        public bool enabled;
 
+        public void TryCall(string method)
+        {
+            if (HasMethod(method))
+            {
+                Call(method);
+            }
         }
 
-        public virtual void Awake()
+        public void TryCallDeferred(string method)
         {
-
+            if (HasMethod(method))
+            {
+                Call(method);
+            }
         }
-
-        public virtual void Update()
-        {
-
-        }
-
-        public virtual void FixedUpdate()
-        {
-
-        }
-
-
 
         public override void _Ready()
         {
-            Awake();
-            Start();
+            enabled = true;
+            TryCall("Awake");
+            TryCall("OnEnable");
+            TryCall("Start");
+            TryCall("OnRenderObject");
         }
 
         public override void _Process(float delta)
         {
-            Update();
+            TryCall("Update");
         }
 
         public override void _PhysicsProcess(float delta)
         {
-            FixedUpdate();
+           TryCall("FixedUpdate();");
         }
     }
 
