@@ -13,6 +13,11 @@ config_version=4
 config/name="DanKeTools_Godot"
 run/main_scene="res://Scenes/Control.tscn"
 
+[autoload]
+
+SceneManager="*res://DanKeTools/Scene/SceneManager.cs"
+MonoController="*res://DanKeTools/Mono/MonoController.cs"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

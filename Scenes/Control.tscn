@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://DanKeTools/Scene/GodotSceneManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Button.cs" type="Script" id=2]
 
 [node name="Control" type="Control"]
@@ -14,10 +13,4 @@ margin_right = 806.0
 margin_bottom = 441.0
 script = ExtResource( 2 )
 
-[node name="Button2" type="Button" parent="."]
-margin_right = 118.0
-margin_bottom = 80.0
-script = ExtResource( 1 )
-
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]

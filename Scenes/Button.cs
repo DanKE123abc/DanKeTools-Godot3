@@ -1,5 +1,7 @@
 using Godot;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Security.Policy;
 using DanKeTools.Event;
 using DanKeTools;
@@ -21,14 +23,16 @@ public class Button : Godot.Button
 	private void _on_Button_pressed()
 	{
 		EventCenter.Instance().EventTrigger("Hello");
-		SceneManager.Instance().LoadScene("res://Scenes/Change.tscn",Test);
+		var sceneManager = GetNode<SceneManager>("/root/SceneManager");
+		sceneManager.LoadSceneAsyn("res://Scenes/Change.tscn",Test);
 	}
 
 	void Test()
 	{
 		GD.Print("Change");
 	}
-	
+
+
 }
 
 
