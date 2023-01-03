@@ -19,6 +19,7 @@ SceneManager="*res://DanKeTools/Scene/SceneManager.cs"
 MonoController="*res://DanKeTools/Mono/MonoController.cs"
 MonoManager="*res://DanKeTools/Mono/MonoManager.cs"
 InputManager="*res://DanKeTools/IO/InputManager.cs"
+TestClass="*res://DanKeTools/TestClass.cs"
 
 [gui]
 
