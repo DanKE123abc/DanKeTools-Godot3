@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="DanKeTools_Godot"
-run/main_scene="res://Scenes/Control.tscn"
+run/main_scene="res://Control.tscn"
 
 [autoload]
 
@@ -19,7 +19,10 @@ SceneManager="*res://DanKeTools/Scene/SceneManager.cs"
 MonoController="*res://DanKeTools/Mono/MonoController.cs"
 MonoManager="*res://DanKeTools/Mono/MonoManager.cs"
 InputManager="*res://DanKeTools/IO/InputManager.cs"
-TestClass="*res://DanKeTools/TestClass.cs"
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
 
 [gui]
 

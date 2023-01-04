@@ -115,7 +115,7 @@ namespace DanKeTools.IO
         }
         
         /// <summary>
-        /// 加载Mesh
+        /// 加载Animation
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -126,7 +126,7 @@ namespace DanKeTools.IO
         }
         
         /// <summary>
-        /// 加载Mesh
+        /// 加载AudioStream
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -137,7 +137,7 @@ namespace DanKeTools.IO
         }
         
         /// <summary>
-        /// 加载Mesh
+        /// 加载Font
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -148,7 +148,7 @@ namespace DanKeTools.IO
         }
         
         /// <summary>
-        /// 加载Mesh
+        /// 加载Translation
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
