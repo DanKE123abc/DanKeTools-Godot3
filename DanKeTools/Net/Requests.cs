@@ -21,7 +21,7 @@ namespace DanKeTools.Net
     {
 
         public static string _UserAgent = "DanKeToolsRequests/1.0";
-        
+
         /// <summary>
         /// 向指定URL发送GET方法的请求
         /// </summary>
@@ -64,6 +64,7 @@ namespace DanKeTools.Net
                     reader.Close();
                 }
             }
+
             return result;
         }
 
@@ -85,7 +86,7 @@ namespace DanKeTools.Net
                 request.Method = "GET";
                 request.ContentType = "text/html;charset=" + encoding;
                 request.Accept = "*/*";
-                request.UserAgent =  Requests._UserAgent;
+                request.UserAgent = Requests._UserAgent;
 
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 Stream responseStream = response.GetResponseStream();
@@ -110,6 +111,7 @@ namespace DanKeTools.Net
                     reader.Close();
                 }
             }
+
             return result;
         }
 
@@ -132,7 +134,7 @@ namespace DanKeTools.Net
                 request.ServicePoint.Expect100Continue = false;
                 request.ContentType = "application/x-www-form-urlencoded";
                 request.Accept = "*/*";
-                request.UserAgent =  Requests._UserAgent;
+                request.UserAgent = Requests._UserAgent;
                 request.ContentLength = Encoding.UTF8.GetByteCount(jsonData);
                 request.CookieContainer = cookie;
                 using (StreamWriter writer = new StreamWriter(request.GetRequestStream()))
@@ -151,16 +153,19 @@ namespace DanKeTools.Net
 
                         reader.Close();
                     }
+
                     responseStream.Close();
                 }
+
                 response.Close();
                 response = null;
                 request = null;
             }
             catch (Exception ex)
             {
-                GD.Print("发送GET请求出现异常：" + ex.Message);
+                GD.Print("发送Post请求出现异常：" + ex.Message);
             }
+
             return result;
         }
 
@@ -184,10 +189,11 @@ namespace DanKeTools.Net
                 request.ServicePoint.Expect100Continue = false;
                 request.ContentType = "application/x-www-form-urlencoded";
                 request.Accept = "*/*";
-                request.UserAgent =  Requests._UserAgent;
+                request.UserAgent = Requests._UserAgent;
                 request.ContentLength = Encoding.UTF8.GetByteCount(jsonData);
                 request.CookieContainer = cookie;
-                using (StreamWriter writer = new StreamWriter(request.GetRequestStream(), Encoding.GetEncoding(encoding)))
+                using (StreamWriter writer =
+                       new StreamWriter(request.GetRequestStream(), Encoding.GetEncoding(encoding)))
                 {
 
                     writer.Write(jsonData);
@@ -203,21 +209,52 @@ namespace DanKeTools.Net
 
                         reader.Close();
                     }
+
                     responseStream.Close();
                 }
+
                 response.Close();
                 response = null;
                 request = null;
             }
             catch (Exception ex)
             {
-                GD.Print("发送GET请求出现异常：" + ex.Message);
-                
-                
+                GD.Print("发送Post请求出现异常：" + ex.Message);
+
+
             }
+
             return result;
         }
-        
+
+        /// <summary>
+        /// 下载文件
+        /// </summary>
+        /// <param name="url">文件地址</param>
+        /// <param name="path">目录</param>
+        /// <returns>下载完返回true</returns>
+        public static bool Download(string url, string path)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.UserAgent = Requests._UserAgent;
+            //发送请求并获取相应回应数据
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream responseStream = response.GetResponseStream();
+            //创建本地文件写入流
+            Stream stream = new FileStream(path, FileMode.Create);
+            byte[] bArr = new byte[1024];
+            int size = responseStream.Read(bArr, 0, (int)bArr.Length);
+            while (size > 0)
+            {
+                stream.Write(bArr, 0, size);
+                size = responseStream.Read(bArr, 0, (int)bArr.Length);
+            }
+
+            stream.Close();
+            responseStream.Close();
+            return true;
+        }
+
     }
 
 }

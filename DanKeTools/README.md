@@ -1,6 +1,6 @@
 # DanKeTools
 
-当前版本：v0.9.0
+当前版本：v0.9.1
 
 ## 使用前必读
 
@@ -48,6 +48,12 @@ using DanKeTools.Mono;
 
 ```c#
 using DanKeTools.Net;
+```
+
+##### 有限状态机和状态基类
+
+```c#
+using DanKeTools.Fsm;
 ```
 
 ##### 场景加载

@@ -12,7 +12,7 @@ DanKeTools_Godot是在Godot Mono版本上可以使用的开发框架，包含了
 
 Godot开发版本： v3.5.1.stable.mono.official.6fed1ffa3
 
-模式：OpenGL ES 3.0
+Build Tool：dotnet CLI
 
 ### 模块简介
 
@@ -28,7 +28,7 @@ IO —— 输入管理和文件管理模块（已完成✔️）
 
 Mono —— Mono管理器模块（已完成✔️）
 
-Net —— http请求模块（已完成✔️）
+Net —— http模块（已完成✔️）
 
 *Pool —— 缓存池模块（未完成）*
 
@@ -40,3 +40,18 @@ Scene —— 场景加载模块（已完成✔️）
 
 Utils —— 常用工具类（除了Unity特有的其他均已完成✔️）
 
+### 更新日志
+
+**v0.9.1**
+
+对应Unity版v1.1.0
+
+http模块新增下载文件功能
+
+FSM有限状态机
+
+**v0.9.0**
+
+对应Unity版v1.0.0
+
+部分功能未完成
