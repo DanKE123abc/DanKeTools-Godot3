@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="VoicePlayer" type="Node"]
+
+[node name="SoundPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="BKMusicPlayer" type="AudioStreamPlayer" parent="."]

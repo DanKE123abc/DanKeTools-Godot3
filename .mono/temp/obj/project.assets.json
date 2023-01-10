@@ -9,6 +9,7 @@
   },
   "packageFolders": {
     "C:\\Users\\DanKe\\.nuget\\packages\\": {},
+    "C:\\Users\\DanKe\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {},
     "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -21,10 +22,12 @@
       "outputPath": "D:\\DanKeTools_Godot\\.mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Users\\DanKe\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
         "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\DanKe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DanKe\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

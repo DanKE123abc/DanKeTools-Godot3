@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using DanKeTools.Pool;
+using DanKeTools.Voice;
 
 public class Spatial : Godot.Spatial
 {
@@ -8,19 +8,10 @@ public class Spatial : Godot.Spatial
     {
         if (Input.IsActionPressed("right"))
         {
-            PackedScene _obj = (PackedScene)GD.Load("res://Cube.tscn");
-            Node obj = _obj.Instance();
-            //obj = GameObject.Instantiate(Resources.Load<GameObject>(name));
-            AddChild(obj);
-            Node pool = new Node();
-            pool.Name = "Pool";
-            AddChild(pool);
+            GD.Print("try play");
+            var voiceManager = GetNode<VoiceManager>("/root/VoiceManager");
+            voiceManager.PlayBKMusic("test.wav");
         }
 
-        if (Input.IsActionPressed("left"))
-        {
-            var poolManager = GetNode<PoolManager>("/root/PoolManager");
-            poolManager.GetObject("Sphere");
-        }
     }
 }
