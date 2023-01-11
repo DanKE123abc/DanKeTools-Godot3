@@ -17,28 +17,31 @@ namespace DanKeTools.Scene
     ///脚本功能：
     ///备注：
     ///</summary>
-
+    
     public class SceneManager : Node
     {
-        public void LoadScene(string path, Action func)
+        
+        /// <param name="name">*.tscn</param>
+        public void LoadScene(string name, Action func)
         {
-            GetTree().ChangeScene(path);
+            GetTree().ChangeScene("res://"+name);
             func();
         }
         
-        public void LoadSceneAsyn(string path, Action func)
+        /// <param name="name">*.tscn</param>
+        public void LoadSceneAsyn(string name, Action func)
         {
             var monoManager = GetNode<MonoManager>("/root/MonoManager");
-            monoManager.StartCoroutine(ReallyLoadSceneAsyn(path, func));
+            monoManager.StartCoroutine(ReallyLoadSceneAsyn("res://"+name, func));
         }
         
         private ResourceInteractiveLoader _loader;
         private double _itemCount;
         private double _nowCount;
         private double _progress;
-        private IEnumerator ReallyLoadSceneAsyn(string path, Action func)
+        private IEnumerator ReallyLoadSceneAsyn(string name, Action func)
         {
-            _loader = ResourceLoader.LoadInteractive(path);
+            _loader = ResourceLoader.LoadInteractive(name);
             _itemCount = _loader.GetStageCount();
             while (true)
             {

@@ -41,7 +41,7 @@ namespace DanKeTools.Voice
         /// <summary>
         /// 播放背景音乐
         /// </summary>
-        /// <param name="name">背景音乐</param>
+        /// <param name="name">wav背景音乐(无需后缀名)</param>
         public void PlayBKMusic(string name)
         {
             if (bkMusic == null)
@@ -53,7 +53,7 @@ namespace DanKeTools.Voice
 
             var fileManager = GetNode<FileManager>("/root/FileManager");
             //异步加载背景音乐并且加载完成后播放
-            fileManager.LoadAsync<AudioStream>("Music/BK/" + name, (clip) =>
+            fileManager.LoadAsync<AudioStream>("Music/BK/" + name+".wav", (clip) =>
             {
                 bkMusic.Stream = clip;
                 //调整大小 
@@ -106,7 +106,7 @@ namespace DanKeTools.Voice
         /// <summary>
         /// 播放音效
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">ogg音效(无需后缀名)</param>
         /// <param name="isLoop"></param>
         /// <param name="callback"></param>
         public void PlaySound(string name, bool isLoop, Action<AudioStreamPlayer> callback = null)
@@ -123,7 +123,7 @@ namespace DanKeTools.Voice
             soundObj.AddChild(source);
             
             var fileManager = GetNode<FileManager>("/root/FileManager");
-            fileManager.LoadAsync<AudioStreamOGGVorbis>("Music/Sounds/" + name, (clip) =>
+            fileManager.LoadAsync<AudioStreamOGGVorbis>("Music/Sounds/" + name+".ogg", (clip) =>
             {
                 clip.Loop = isLoop;
                 source.Stream = clip;
