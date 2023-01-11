@@ -12,7 +12,7 @@ namespace DanKeTools.Voice
 
     ///<summary>
     ///脚本名称： VoiceManager.cs
-    ///修改时间：2022/12/25
+    ///修改时间：2023/1/11
     ///脚本功能：声音管理器
     ///备注：
     ///</summary>

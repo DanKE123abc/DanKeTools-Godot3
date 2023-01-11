@@ -12,7 +12,7 @@ namespace DanKeTools.IO
 
     ///<summary>
     ///脚本名称： FileManager.cs
-    ///修改时间：2022/12/29
+    ///修改时间：2023/1/11
     ///脚本功能：
     ///备注：
     ///</summary>
