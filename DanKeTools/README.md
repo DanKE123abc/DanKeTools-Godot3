@@ -1,6 +1,6 @@
 # DanKeTools
 
-当前版本：v0.9.2
+当前版本：v0.9.3
 
 ## 使用前必读
 
@@ -15,6 +15,8 @@
 ***Mono/MonoController.cs***
 
 ***Scene/SceneManager.cs***
+
+***Voice/VoiceManager.cs***
 
 ## 命名空间
 
@@ -60,6 +62,12 @@ using DanKeTools.Fsm;
 
 ```c#
 using DanKeTools.Scene;
+```
+
+##### 音效管理器
+
+```c#
+using DanKeTools.Voice;
 ```
 
 ##### 转Json
