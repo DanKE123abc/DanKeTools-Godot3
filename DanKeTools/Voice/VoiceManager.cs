@@ -31,6 +31,7 @@ namespace DanKeTools.Voice
             {
                 if (!soundList[i].Playing)
                 {
+                    soundObj.RemoveChild(soundList[i]);
                     soundList.RemoveAt(i);
                 }
             }

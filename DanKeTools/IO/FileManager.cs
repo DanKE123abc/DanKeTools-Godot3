@@ -58,7 +58,7 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public T Load<T>(string name) where T : Resource
         {
-            T res = (T)GD.Load(name);
+            T res = (T)GD.Load("res://"+name);
             return res;
         }
         
@@ -76,7 +76,7 @@ namespace DanKeTools.IO
         }
         private IEnumerator ReallyLoadAsync<T>(string name, Action<T> callback) where T : Resource
         {
-            T res = (T)GD.Load(name);
+            T res = (T)GD.Load("res://"+name);
             yield return res;
             callback(res);
         }  
@@ -88,7 +88,7 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public static Texture LoadTexture(string path)
         {
-            var res = (Texture)GD.Load(path);
+            var res = (Texture)GD.Load("res://"+path);
             return res;
         }
 
@@ -99,7 +99,7 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public static Script LoadScript(string path)
         {
-            var res = (Script)GD.Load(path);
+            var res = (Script)GD.Load("res://"+path);
             return res;
         }
         
@@ -110,7 +110,7 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public static Mesh LoadMesh(string path)
         {
-            var res = (Mesh)GD.Load(path);
+            var res = (Mesh)GD.Load("res://"+path);
             return res;
         }
         
@@ -121,7 +121,7 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public static Animation LoadAnimation(string path)
         {
-            var res = (Animation)GD.Load(path);
+            var res = (Animation)GD.Load("res://"+path);
             return res;
         }
         
@@ -132,7 +132,7 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public static AudioStream LoadAudioStream(string path)
         {
-            var res = (AudioStream)GD.Load(path);
+            var res = (AudioStream)GD.Load("res://"+path);
             return res;
         }
         
@@ -143,7 +143,7 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public static Font LoadFont(string path)
         {
-            var res = (Font)GD.Load(path);
+            var res = (Font)GD.Load("res://"+path);
             return res;
         }
         
@@ -154,7 +154,7 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public static Translation LoadTranslation(string path)
         {
-            var res = (Translation)GD.Load(path);
+            var res = (Translation)GD.Load("res://"+path);
             return res;
         }
     }
