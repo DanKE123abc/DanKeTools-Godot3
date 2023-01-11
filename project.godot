@@ -20,7 +20,6 @@ MonoController="*res://DanKeTools/Mono/MonoController.cs"
 MonoManager="*res://DanKeTools/Mono/MonoManager.cs"
 InputManager="*res://DanKeTools/IO/InputManager.cs"
 FileManager="*res://DanKeTools/IO/FileManager.cs"
-VoicePlayer="*res://DanKeTools/Voice/VoicePlayer.tscn"
 VoiceManager="*res://DanKeTools/Voice/VoiceManager.cs"
 
 [editor_plugins]

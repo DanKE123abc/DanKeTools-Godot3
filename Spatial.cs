@@ -8,9 +8,15 @@ public class Spatial : Godot.Spatial
     {
         if (Input.IsActionPressed("right"))
         {
-            GD.Print("try play");
+            GD.Print("try play bk");
             var voiceManager = GetNode<VoiceManager>("/root/VoiceManager");
             voiceManager.PlayBKMusic("test.wav");
+        }
+        if (Input.IsActionPressed("left"))
+        {
+            GD.Print("try play ogg");
+            var voiceManager = GetNode<VoiceManager>("/root/VoiceManager");
+            voiceManager.PlaySound("water.ogg",false);
         }
 
     }

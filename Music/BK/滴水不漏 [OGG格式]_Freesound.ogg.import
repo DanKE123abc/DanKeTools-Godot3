@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/滴水不漏 [OGG格式]_Freesound.ogg-12c534f3c0487612c94fcbb13f13f8b6.oggstr"
+
+[deps]
+
+source_file="res://Music/BK/滴水不漏 [OGG格式]_Freesound.ogg"
+dest_files=[ "res://.import/滴水不漏 [OGG格式]_Freesound.ogg-12c534f3c0487612c94fcbb13f13f8b6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
