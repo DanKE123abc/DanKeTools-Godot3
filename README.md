@@ -1,6 +1,6 @@
 # DanKeTools_Godot
 
-![Language](https://img.shields.io/badge/Language-Csharp-C#) ![LICENSE](https://img.shields.io/badge/LICENSE-Apache--2.0-yellow) ![Author](https://img.shields.io/badge/Author-DanKe-blue) ![Godot](https://img.shields.io/badge/Godot-v3.5.1.mono-red)
+![Language](https://img.shields.io/badge/Language-Csharp-C#) ![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow) ![Author](https://img.shields.io/badge/Author-DanKe-blue) ![Godot](https://img.shields.io/badge/Godot-v3.5.1.mono-red)
 
 DanKeTools是基于Unity的一个基础开发框架，用于提升开发效率，这里是[DanKeTools仓库](https://github.com/DanKE123abc/DanKeTools/)。
 
