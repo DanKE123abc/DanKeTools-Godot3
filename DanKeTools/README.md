@@ -1,6 +1,6 @@
 # DanKeTools
 
-当前版本：v0.9.3
+当前版本：v1.2.0
 
 ## 使用前必读
 
@@ -17,6 +17,8 @@
 ***Scene/SceneManager.cs***
 
 ***Voice/VoiceManager.cs***
+
+***Thread/ThreadManager.cs***
 
 ## 命名空间
 
@@ -68,6 +70,12 @@ using DanKeTools.Scene;
 
 ```c#
 using DanKeTools.Voice;
+```
+
+##### 子线程管理器
+
+```c#
+using DanKeTools.Thread;
 ```
 
 ##### 转Json

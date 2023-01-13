@@ -80,7 +80,7 @@ namespace DanKeTools.Mono
     ///<summary>
     ///脚本名称： MonoManager.cs
     ///修改时间：2022/12/30
-    ///脚本功能：
+    ///脚本功能：Mono事件管理器
     ///备注：
     ///</summary>
     public class MonoManager : Node
@@ -117,9 +117,9 @@ namespace DanKeTools.Mono
         /// <summary>
         /// 开启协程
         /// </summary>
-        public Coroutine StartCoroutine(IEnumerator ie)
+        public Coroutine StartCoroutine(IEnumerator routine)
         {
-            var c = new Coroutine(ie);
+            var c = new Coroutine(routine);
             coroutineList.AddLast(c);
             return c;
         }
@@ -127,9 +127,9 @@ namespace DanKeTools.Mono
         /// <summary>
         /// 停止协程
         /// </summary>
-        public void StopCoroutine(Coroutine coroutine)
+        public void StopCoroutine(Coroutine routine)
         {
-            coroutinesToStop.AddLast(coroutine);
+            coroutinesToStop.AddLast(routine);
         }
         
         /// <summary>

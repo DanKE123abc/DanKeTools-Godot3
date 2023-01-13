@@ -14,22 +14,30 @@ namespace DanKeTools.Scene
     ///<summary>
     ///脚本名称： SceneManager.cs
     ///修改时间：2022/12/30
-    ///脚本功能：
+    ///脚本功能：场景加载管理器
     ///备注：
     ///</summary>
     
     public class SceneManager : Node
     {
         
-        /// <param name="name">*.tscn</param>
+        /// <summary>
+        /// 加载场景
+        /// </summary>
+        /// <param name="name">场景名称(*.tscn)</param>
+        /// <param name="func">回调函数</param>
         public void LoadScene(string name, Action func)
         {
             GetTree().ChangeScene("res://"+name);
             func();
         }
         
-        /// <param name="name">*.tscn</param>
-        public void LoadSceneAsyn(string name, Action func)
+        /// <summary>
+        /// 加载场景
+        /// </summary>
+        /// <param name="name">场景名称(*.tscn)</param>
+        /// <param name="func">回调函数</param>
+        public void LoadSceneAsyn(string name, Action func = null)
         {
             var monoManager = GetNode<MonoManager>("/root/MonoManager");
             monoManager.StartCoroutine(ReallyLoadSceneAsyn("res://"+name, func));
@@ -39,7 +47,12 @@ namespace DanKeTools.Scene
         private double _itemCount;
         private double _nowCount;
         private double _progress;
-        private IEnumerator ReallyLoadSceneAsyn(string name, Action func)
+        /// <summary>
+        /// 异步加载场景
+        /// </summary>
+        /// <param name="name">场景名称(*.tscn)</param>
+        /// <param name="func">回调函数</param>
+        private IEnumerator ReallyLoadSceneAsyn(string name, Action func = null)
         {
             _loader = ResourceLoader.LoadInteractive(name);
             _itemCount = _loader.GetStageCount();

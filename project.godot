@@ -21,7 +21,6 @@ MonoManager="*res://DanKeTools/Mono/MonoManager.cs"
 InputManager="*res://DanKeTools/IO/InputManager.cs"
 FileManager="*res://DanKeTools/IO/FileManager.cs"
 VoiceManager="*res://DanKeTools/Voice/VoiceManager.cs"
-PoolManager="*res://DanKeTools/Pool/PoolManager.cs"
 
 [editor_plugins]
 
