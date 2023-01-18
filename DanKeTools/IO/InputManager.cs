@@ -109,12 +109,12 @@ namespace DanKeTools.IO
 
             if (GetKeyDown(eventKey, key))
             {
-                EventCenter.Instance().EventTrigger("KeyisDown", key);
+                EventCenter.instance.EventTrigger("KeyisDown", key);
             }
 
             if (GetKeyUp(eventKey, key))
             {
-                EventCenter.Instance().EventTrigger("KeyisUp", key);
+                EventCenter.instance.EventTrigger("KeyisUp", key);
             }
         }
 

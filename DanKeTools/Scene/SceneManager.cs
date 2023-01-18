@@ -61,7 +61,7 @@ namespace DanKeTools.Scene
                 _nowCount = _loader.GetStage();
                 _loader.Poll();
                 _progress = _nowCount % _itemCount;
-                EventCenter.Instance().EventTrigger("SceneLoading",_progress);
+                EventCenter.instance.EventTrigger("SceneLoading",_progress);
                 yield return _progress;
                 if (_loader.GetResource() != null)
                 {
